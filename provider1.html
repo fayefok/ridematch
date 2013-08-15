@@ -1,0 +1,119 @@
+<!DOCTYPE html >
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>Home</title>
+        <link rel="stylesheet" href="css/layout.css" type="text/css" media="screen">
+        <!-- <link rel="stylesheet" href="demo-print.css" type="text/css" media="print"> -->
+        <link rel="https://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" type="text/css" media="screen">
+        <script src="https://code.jquery.com/jquery-1.9.1.js" type="text/javascript" charset="utf-8"></script>
+        <script src="https://code.jquery.com/ui/1.10.3/jquery-ui.js" type="text/javascript" charset="utf-8"></script>
+        <style type="text/css" media="screen">
+            
+        </style>
+        <script type="text/javascript" charset="utf-8">
+            var selectboxhtml = '<option value="1100" selected="selected">Any time</option>'
+                + '<option value="0100">1am</option>'
+                + '<option value="0200">2am</option>'
+                + '<option value="0300">3am</option>'
+                + '<option value="0400">4am</option>'
+                + '<option value="0500">5am</option>'
+                + '<option value="0600">6am</option>'
+                + '<option value="0700">7am</option>'
+                + '<option value="0800">8am</option>'
+                + '<option value="0900">9am</option>'
+                + '<option value="1000">10am</option>'
+                + '<option value="1100">11am</option>'
+                + '<option value="1200">12pm</option>'
+                + '<option value="1300">1pm</option>'
+                + '<option value="1400">2pm</option>'
+                + '<option value="1500">3pm</option>'
+                + '<option value="1600">4pm</option>'
+                + '<option value="1700">5pm</option>'
+                + '<option value="1800">6pm</option>'
+                + '<option value="1900">7pm</option>'
+                + '<option value="2000">8pm</option>'
+                + '<option value="2100">9pm</option>'
+                + '<option value="2200">10pm</option>'
+                + '<option value="2300">11pm</option>'
+                + '<option value="0001">12am</option>';
+            $(document).ready(function() {
+                $('select.pv_hop_select').html(selectboxhtml);
+            });
+        </script>
+    </head>
+    <body>
+        <div id="content">
+            <div id="banner">
+                <image class="image_logo" src="assets/logo.png" alt="logo" />
+            </div>
+            <div id="main">
+                <div class="pv_colum_1">
+                    <div class="row_form_text"><span class="text_section_title">Contact Information</span></div>
+                    <div class="row_form_text"><span class="text_pvc1">Provider Name</span><input id="pv_name" type="text" name="name" /></div>
+                    <div class="row_form_text"><span class="text_pvc1">Address 1</span><input id="pv_addr1" type="text" name="addr1" /></div>
+                    <div class="row_form_text"><span class="text_pvc1">Address 2</span><input id="pv_addr2" type="text" name="addr2" /></div>
+                    <div class="row_form_text"><span class="text_pvc1">City</span><input id="pv_city" type="text" name="city" /></div>
+                    <div class="row_form_text"><span class="text_pvc1">State</span><input id="pv_state" type="text" name="state" /></div>
+                    <div class="row_form_text"><span class="text_pvc1">Zip</span><input id="pv_zip" type="text" name="zip" /></div>
+                    <div class="row_form_text"><span class="text_pvc1">Phone &#35</span><input id="pv_phone" type="text" name="phone" /></div>
+                    <div class="row_form_text"><span class="text_pvc1">URL</span><input id="pv_url" type="text" name="url" /></div>
+                </div>
+                <div class="pv_colum_2">
+                    <div class="row_form_text"><span class="text_section_title">Hours Of Operation</span></div>
+                    <div class="row_form_text">
+                        <input id="pv_hop_day1" type="checkbox" name="pv_hop_day" />
+                        <span class="text_pvc2">MON</span>
+                        <select id="pv_hop_day1_select1" class="pv_hop_select"></select>
+                        <select id="pv_hop_day1_select2" class="pv_hop_select"></select>
+                    </div>
+                    <div class="row_form_text">
+                        <input id="pv_hop_day2" type="checkbox" name="pv_hop_day" />
+                        <span class="text_pvc2">TUE</span>
+                        <select id="pv_hop_day2_select1" class="pv_hop_select"></select>
+                        <select id="pv_hop_day2_select2" class="pv_hop_select"></select>
+                    </div>
+                    <div class="row_form_text">
+                        <input id="pv_hop_day3" type="checkbox" name="pv_hop_day" />
+                        <span class="text_pvc2">WED</span>
+                        <select id="pv_hop_day3_select1" class="pv_hop_select"></select>
+                        <select id="pv_hop_day3_select2" class="pv_hop_select"></select>
+                    </div>
+                    <div class="row_form_text">
+                        <input id="pv_hop_day4" type="checkbox" name="pv_hop_day" />
+                        <span class="text_pvc2">THR</span>
+                        <select id="pv_hop_day4_select1" class="pv_hop_select"></select>
+                        <select id="pv_hop_day4_select2" class="pv_hop_select"></select>
+                    </div>
+                    <div class="row_form_text">
+                        <input id="pv_hop_day5" type="checkbox" name="pv_hop_day" />
+                        <span class="text_pvc2">FRI</span>
+                        <select id="pv_hop_day5_select1" class="pv_hop_select"></select>
+                        <select id="pv_hop_day5_select2" class="pv_hop_select"></select>
+                    </div>
+                    <div class="row_form_text">
+                        <input id="pv_hop_day6" type="checkbox" name="pv_hop_day" />
+                        <span class="text_pvc2">SAT</span>
+                        <select id="pv_hop_day6_select1" class="pv_hop_select"></select>
+                        <select id="pv_hop_day6_select2" class="pv_hop_select"></select>
+                    </div>
+                    <div class="row_form_text">
+                        <input id="pv_hop_day7" type="checkbox" name="pv_hop_day" />
+                        <span class="text_pvc2">SUN</span>
+                        <select id="pv_hop_day7_select1" class="pv_hop_select"></select>
+                        <select id="pv_hop_day7_select2" class="pv_hop_select"></select>
+                    </div>
+                    
+                </div>  
+                <div class="row_form_text">
+                    <div class="button_submit">
+                        <span class="text_button"><a href="#">CLEAR</a></span>
+                    </div>
+                    <div class="button_submit">
+                        <span class="text_button"><a href="provider2.html">NEXT</a></span>
+                    </div>
+                </div>                              
+            </div>
+        </div>
+    </body>
+</html>

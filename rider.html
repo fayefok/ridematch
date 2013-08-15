@@ -1,0 +1,141 @@
+
+<!DOCTYPE html >
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>Home</title>
+        <link rel="stylesheet" href="css/layout.css" type="text/css" media="screen">
+        <!-- <link rel="stylesheet" href="demo-print.css" type="text/css" media="print"> -->
+        <link rel="https://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" type="text/css" media="screen">
+        <script src="https://code.jquery.com/jquery-1.9.1.js" type="text/javascript" charset="utf-8"></script>
+        <script src="https://code.jquery.com/ui/1.10.3/jquery-ui.js" type="text/javascript" charset="utf-8"></script>
+        <style type="text/css" media="screen">
+
+        </style>
+        <script type="text/javascript" charset="utf-8">
+            var selectboxhtml = '<option value="1100" selected="selected">Any time</option>'
+                + '<option value="0100">1am</option>'
+                + '<option value="0200">2am</option>'
+                + '<option value="0300">3am</option>'
+                + '<option value="0400">4am</option>'
+                + '<option value="0500">5am</option>'
+                + '<option value="0600">6am</option>'
+                + '<option value="0700">7am</option>'
+                + '<option value="0800">8am</option>'
+                + '<option value="0900">9am</option>'
+                + '<option value="1000">10am</option>'
+                + '<option value="1100">11am</option>'
+                + '<option value="1200">12pm</option>'
+                + '<option value="1300">1pm</option>'
+                + '<option value="1400">2pm</option>'
+                + '<option value="1500">3pm</option>'
+                + '<option value="1600">4pm</option>'
+                + '<option value="1700">5pm</option>'
+                + '<option value="1800">6pm</option>'
+                + '<option value="1900">7pm</option>'
+                + '<option value="2000">8pm</option>'
+                + '<option value="2100">9pm</option>'
+                + '<option value="2200">10pm</option>'
+                + '<option value="2300">11pm</option>'
+                + '<option value="0001">12am</option>';
+            $(document).ready(function() {
+                var now = new Date();
+                var currdate = (now.getMonth()+1)+"/"+now.getDate()+"/"+now.getFullYear();  
+                $('input#rd_date').datepicker().val(currdate);
+
+                $('select#rd_time').html(selectboxhtml);
+
+            });        
+        </script>
+    </head>
+    <body>
+        <div id="content">
+            <div id="banner">
+                <image class="image_logo" src="assets/logo.png" alt="logo" />
+            </div>
+            <div id="main">
+                <div class="row_form_field">
+                    <span class="text_rd1">Zip Code From:</span>
+                    <input id="rd_zip_from" type="text" name="rd_zip" />
+                    <span class="text_rd1">To:</span>
+                    <input id="rd_zip_to" type="text" name="rd_zip" />
+
+                    <span class="text_rd2">Date:</span>
+                    <input id="rd_date" type="text" name="rd_date" />
+                    <span class="text_rd2">Time:</span>
+                    <select id="rd_time"></select>
+                </div>
+                <div class="row_form_field">
+                    <table width="100%"><tbody>
+                        <tr><th width="25%">Purpose:</th><th width="25%"></th><th width="25%"></th><th width="25%"></th></tr>
+                        <tr>
+                            <td><input id="rd_purp_1" type="checkbox" name="rd_purp" />Airport transportation</td>
+                            <td><input id="rd_purp_2" type="checkbox" name="rd_purp" />Grocery Shopping</td>
+                            <td><input id="rd_purp_3" type="checkbox" name="rd_purp" />Personal Business</td>
+                            <td><input id="rd_purp_4" type="checkbox" name="rd_purp" />Others</td>
+                        </tr>
+                         <tr>
+                            <td><input id="rd_purp_5" type="checkbox" name="rd_purp" />Education/Training</td>
+                            <td><input id="rd_purp_6" type="checkbox" name="rd_purp" />Home</td>
+                            <td><input id="rd_purp_7" type="checkbox" name="rd_purp" />Recreation</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><input id="rd_purp_8" type="checkbox" name="rd_purp" />Employment</td>
+                            <td><input id="rd_purp_9" type="checkbox" name="rd_purp" />Medical/Healthcare</td>
+                            <td><input id="rd_purp_10" type="checkbox" name="rd_purp" />Shopping</td>
+                            <td></td>
+                        </tr>
+                    </tbody></table>
+                </div>
+                <div class="row_form_field">
+                    <table width="100%"><tbody>
+                        <tr><th width="25%">Special Needs:</th><th width="25%"></th><th width="50%"></th></tr>
+                        <tr>
+                            <td><input id="rd_need_1" type="checkbox" name="rd_need" />Wheelchair</td>
+                            <td><input id="rd_need_2" type="checkbox" name="rd_need" />Door To Door Service</td>
+                            <td><input id="rd_need_3" type="checkbox" name="rd_need" />3 or 4 Wheeled Scotter</td>
+                        </tr>
+                         <tr>
+                            <td><input id="rd_need_4" type="checkbox" name="rd_need" />Walker</td>
+                            <td><input id="rd_need_5" type="checkbox" name="rd_need" />Help With Bags/Packages</td>
+                            <td><input id="rd_need_6" type="checkbox" name="rd_need" />Travelling With Service Animal</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"><input id="rd_need_7" type="checkbox" name="rd_need" />Traveling with Personal Assistant </td>
+                            <td></td>
+                        </tr>
+                    </tbody></table>
+                </div>
+                <div class="row_form_field">
+                    <table width="100%"><tbody>
+                        <tr><th width="25%">Passenger:</th><th width="25%"></th><th width="25%"></th><th width="25%"></th></tr>
+                        <tr>
+                            <td><input id="rd_pass_1" type="checkbox" name="rd_pass" />Work Source Participant</td>
+                            <td><input id="rd_pass_2" type="checkbox" name="rd_pass" />Voucher Participant</td>
+                            <td><input id="rd_pass_3" type="checkbox" name="rd_pass" />Veteran</td>
+                            <td><input id="rd_pass_4" type="checkbox" name="rd_pass" />General Public</td>
+                        </tr>
+                         <tr>
+                            <td><input id="rd_pass_5" type="checkbox" name="rd_pass" />ASA Paratransit Eligible</td>
+                            <td><input id="rd_pass_6" type="checkbox" name="rd_pass" />Have Disability</td>
+                            <td><input id="rd_pass_7" type="checkbox" name="rd_pass" />Senior</td>
+                            <td><input id="rd_pass_8" type="checkbox" name="rd_pass" />Low Income</td>
+                        </tr>
+                        <tr>
+                            <td><input id="rd_pass_9" type="checkbox" name="rd_pass" />Medicaid Recipient </td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody></table>
+                </div>
+                <div class="row_form_text">
+                    <div class="button_submit">
+                        <span class="text_button"><a href="#">SEARCH</a></span>
+                    </div>
+                </div>                                        
+            </div>
+        </div>
+    </body>
+</html>
